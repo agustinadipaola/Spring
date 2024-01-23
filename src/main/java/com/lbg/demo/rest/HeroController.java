@@ -10,4 +10,10 @@ public class HeroController {
 	public String greeting() {
 		return "HELLO HOLA LABAS";
 	}
+
+	@GetMapping("/hola")
+	public String holaGreeting() {
+		return "Aprendiendo con Agus :) ";
+
+	}
 }
