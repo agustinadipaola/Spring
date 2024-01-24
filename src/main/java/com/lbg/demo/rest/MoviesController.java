@@ -49,16 +49,13 @@ public class MoviesController {
 
 //	update
 	@PatchMapping("/update/{id}")
-	public Movies getMovies(@PathVariable int id, @RequestBody Movies moviesDetails) {
-		Movies movies = this.movies.get(id);
-		movies.setTitle(moviesDetails.getTitle());
-		movies.setYear(moviesDetails.getYear());
-		return movies;
+	public Movies update(@PathVariable int id, @RequestBody Movies moviesDetails) {
+		return this.movies.set(id, moviesDetails);
 	}
 
 //	delete
 	@DeleteMapping("/delete/{id}")
-	public Movies deleteFile(@PathVariable int id) {
+	public Movies deleteMovie(@PathVariable int id) {
 		return this.movies.remove(id);
 	}
 }
