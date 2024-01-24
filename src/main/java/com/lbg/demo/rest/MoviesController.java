@@ -30,9 +30,11 @@ public class MoviesController {
 
 //	create
 	@PostMapping("/create")
-	public String createMovies(@RequestBody Movies newMovies) {
+	public Movies createMovies(@RequestBody Movies newMovies) {
 		this.movies.add(newMovies);
-		return newMovies.toString();
+//		the return below will bring the last entrance from the array  (is -1 since array starts at 0)
+//		return the last element in the list
+		return this.movies.get(this.movies.size() - 1);
 	}
 
 //	view
