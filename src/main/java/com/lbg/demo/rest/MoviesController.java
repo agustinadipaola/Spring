@@ -57,8 +57,8 @@ public class MoviesController {
 	}
 
 //	delete
-	@DeleteMapping("/{id}")
-	public String deleteFile(@PathVariable("id") int id) {
-		return "File deleted ";
+	@DeleteMapping("/delete/{id}")
+	public Movies deleteFile(@PathVariable int id) {
+		return this.movies.remove(id);
 	}
 }
