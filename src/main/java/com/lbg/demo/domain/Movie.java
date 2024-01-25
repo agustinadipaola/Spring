@@ -1,9 +1,39 @@
 package com.lbg.demo.domain;
 
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+
+@Entity
+
 public class Movie {
 
+//	primary key
+	@Id
+//	auto increment
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	private Integer id;
+
 	private String title;
-	private int year;
+
+	private Integer releaseYear;
+
+//	NEED
+//	default constructor
+	public Movie() {
+		super();
+	}
+
+//	getters and setters
+
+	public Integer getId() {
+		return id;
+	}
+
+	public void setId(Integer id) {
+		this.id = id;
+	}
 
 	public String getTitle() {
 		return title;
@@ -13,16 +43,12 @@ public class Movie {
 		this.title = title;
 	}
 
-	public int getYear() {
-		return year;
+	public Integer getReleaseYear() {
+		return releaseYear;
 	}
 
-	public void setYear(int year) {
-		this.year = year;
+	public void setReleaseYear(Integer releaseYear) {
+		this.releaseYear = releaseYear;
 	}
 
-	@Override
-	public String toString() {
-		return "Movies [Movie=" + title + ", Year=" + year + "]";
-	}
 }

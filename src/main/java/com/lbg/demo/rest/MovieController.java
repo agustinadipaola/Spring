@@ -56,7 +56,7 @@ public class MovieController {
 	}
 
 	@PutMapping("/update/{id}")
-	public Movie updateMovies(@PathVariable int id, @RequestBody Movie newMovie) {
+	public Movie updateMovie(@PathVariable int id, @RequestBody Movie newMovie) {
 		return this.service.updateMovie(id, newMovie);
 	}
 
