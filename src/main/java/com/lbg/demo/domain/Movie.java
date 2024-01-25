@@ -1,6 +1,6 @@
 package com.lbg.demo.domain;
 
-public class Movies {
+public class Movie {
 
 	private String title;
 	private int year;
