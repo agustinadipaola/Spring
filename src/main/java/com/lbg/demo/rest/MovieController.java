@@ -28,16 +28,7 @@ public class MovieController {
 		this.service = service;
 	}
 
-	// tells spring to listen for a GET request at /hello
-	@GetMapping("/hello")
-	public String greeting() {
-		return "Hello, World!";
-	}
-
-	@GetMapping("/yo")
-	public String informal() {
-		return "Yo, World!";
-	}
+	// tells spring to listen for a GET request at /xxxx
 
 	@PostMapping("/create")
 	public ResponseEntity<Movie> createMovie(@RequestBody Movie newMovie) {
