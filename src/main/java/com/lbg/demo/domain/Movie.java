@@ -4,6 +4,7 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.ManyToOne;
 
 @Entity
 
@@ -18,6 +19,9 @@ public class Movie {
 	private String title;
 
 	private Integer releaseYear;
+
+	@ManyToOne
+	private Country country;
 
 //	NEED
 //	default constructor
@@ -49,6 +53,14 @@ public class Movie {
 
 	public void setReleaseYear(Integer releaseYear) {
 		this.releaseYear = releaseYear;
+	}
+
+	public Country getCountry() {
+		return country;
+	}
+
+	public void setCountry(Country country) {
+		this.country = country;
 	}
 
 }
