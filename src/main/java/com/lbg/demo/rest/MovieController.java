@@ -42,7 +42,7 @@ public class MovieController {
 
 	// 'id' -> index (for now)
 	@GetMapping("/get/{id}")
-	public ResponseEntity<Movie> getHero(@PathVariable int id) {
+	public ResponseEntity<Movie> getMovie(@PathVariable int id) {
 		return this.service.getMovie(id);
 	}
 
