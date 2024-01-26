@@ -24,9 +24,11 @@ public class Movie {
 	private Country country;
 
 //	NEED
+//	
 //	default constructor
 	public Movie() {
 		super();
+
 	}
 
 //	getters and setters
